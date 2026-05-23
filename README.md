@@ -181,8 +181,8 @@ sudo dnf install neovim
 > ⚠️ **Back up your existing configs first.**
 
 ```bash
-git clone https://github.com/alihassan200721/obsidian-hyprland.git
-cd obsidian-hyprland
+git clone https://github.com/alihassan200721/obsidian-dotfiles.git
+cd obsidian-dotfiles
 chmod +x install.sh
 ./install.sh
 ```
