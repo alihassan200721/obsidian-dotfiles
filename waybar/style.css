@@ -1,0 +1,232 @@
+/* ================================================
+ *  Waybar Style — Obsidian Amber · Three Pill
+ * ================================================ */
+
+* {
+  font-family:   "JetBrains Mono", monospace;
+  font-size:     13px;
+  border:        none;
+  border-radius: 0;
+  min-height:    0;
+  margin:        0;
+  padding:       0;
+  box-shadow:    none;
+}
+
+/* ── Bar (transparent, just a flex row) ──────── */
+window#waybar {
+  background-color: transparent;
+  color:            #b9b9b9;
+}
+
+/* ── The three floating pills ────────────────── */
+.modules-left,
+.modules-center,
+.modules-right {
+  background:    rgba(15, 15, 15, 0.82);
+  border:        1px solid rgba(212, 163, 115, 0.10);
+  border-radius: 14px;
+  margin:        0 4px;
+  padding:       3px 10px;
+}
+
+/* ── All modules reset (no individual bg now) ─ */
+#workspaces,
+#clock,
+#bluetooth,
+#pulseaudio,
+#network,
+#battery,
+#tray,
+#custom-power,
+#custom-brightness {
+  background-color: transparent;
+  border:           none;
+  border-radius:    0;
+  padding:          4px 10px;
+  margin:           0;
+  color:            #b9b9b9;
+  transition:       color 0.2s ease;
+}
+
+/* ── Thin separators between modules ─────────── */
+#custom-power,
+#workspaces,
+#pulseaudio {
+  border-right: 1px solid rgba(212, 163, 115, 0.12);
+  padding-right: 12px;
+  margin-right:  2px;
+}
+
+#bluetooth {
+  border-right: 1px solid rgba(212, 163, 115, 0.12);
+  padding-right: 12px;
+  margin-right:  2px;
+}
+
+#custom-brightness {
+  border-right: 1px solid rgba(212, 163, 115, 0.12);
+  padding-right: 12px;
+  margin-right:  2px;
+}
+
+#battery {
+  border-right: 1px solid rgba(212, 163, 115, 0.12);
+  padding-right: 12px;
+  margin-right:  2px;
+}
+
+/* ── Hover: subtle amber highlight ───────────── */
+#bluetooth:hover,
+#pulseaudio:hover,
+#network:hover,
+#battery:hover,
+#clock:hover,
+#custom-brightness:hover {
+  color: #d4a373;
+}
+
+/* ── Workspaces ───────────────────────────────── */
+#workspaces {
+  padding: 2px 12px 2px 6px;
+}
+
+#workspaces button {
+  background-color: transparent;
+  color:            #5e5e5e;
+  border-radius:    7px;
+  padding:          2px 9px;
+  margin:           1px 2px;
+  font-size:        13px;
+  font-weight:      600;
+  border:           1px solid transparent;
+  transition:       all 0.2s ease;
+}
+
+#workspaces button:hover {
+  background-color: rgba(26, 26, 26, 0.70);
+  color:            #b9b9b9;
+  border-color:     rgba(212, 163, 115, 0.14);
+}
+
+#workspaces button.active {
+  background-color: rgba(26, 26, 26, 0.88);
+  color:            #d4a373;
+  border-color:     rgba(212, 163, 115, 0.35);
+  font-weight:      700;
+}
+
+#workspaces button.empty {
+  color: #404040;
+}
+
+#workspaces button.urgent {
+  background-color: rgba(122, 92, 255, 0.15);
+  color:            #7a5cff;
+  border-color:     rgba(122, 92, 255, 0.30);
+}
+
+/* ── Clock ───────────────────────────────────── */
+#clock {
+  color:       #e5e5e5;
+  font-weight: 600;
+  font-size:   14px;
+  padding:     4px 14px;
+}
+
+/* ── Bluetooth ────────────────────────────────── */
+#bluetooth.on,
+#bluetooth.connected {
+  color: #d4a373;
+}
+
+#bluetooth.off,
+#bluetooth.disabled {
+  color: #404040;
+}
+
+/* ── Pulseaudio ───────────────────────────────── */
+#pulseaudio.muted {
+  color: #404040;
+}
+
+#pulseaudio.bluetooth {
+  color: #d4a373;
+}
+
+/* ── Network ──────────────────────────────────── */
+#network.disconnected {
+  color: #404040;
+}
+
+#network.linked {
+  color: #d4a373;
+}
+
+/* ── Battery ──────────────────────────────────── */
+#battery.charging,
+#battery.plugged {
+  color: #d4a373;
+}
+
+#battery.warning:not(.charging) {
+  color: #c59a6a;
+}
+
+#battery.critical:not(.charging) {
+  color:     #7a5cff;
+  animation: blink 1.2s ease-in-out infinite;
+}
+
+@keyframes blink {
+  50% { color: #9b84ff; }
+}
+
+/* ── Tray ─────────────────────────────────────── */
+#tray {
+  padding: 4px 8px;
+}
+
+#tray > .passive {
+  -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+  -gtk-icon-effect: highlight;
+}
+
+/* ── Power button ─────────────────────────────── */
+#custom-power {
+  color:        #7a5cff;
+  font-size:    16px;
+  padding:      4px 12px 4px 6px;
+  margin-right: 2px;
+  border-right: 1px solid rgba(212, 163, 115, 0.12);
+}
+
+#custom-power:hover {
+  color: #9b84ff;
+}
+
+/* ── Brightness ───────────────────────────────── */
+#custom-brightness {
+  color: #d4a373;
+}
+
+#custom-brightness:hover {
+  color: #e8c098;
+}
+
+/* ── Tooltips ─────────────────────────────────── */
+tooltip {
+  background-color: rgba(15, 15, 15, 0.96);
+  border:           1px solid rgba(212, 163, 115, 0.18);
+  border-radius:    10px;
+  color:            #a0a0a0;
+  font-size:        12px;
+  padding:          6px;
+}
+
+tooltip label {
+  color: #a0a0a0;
+}

@@ -1,0 +1,99 @@
+/* ── Rofi Theme ──────────────────────────────
+ *   Ashborn Smoky Gray Edition
+ * ─────────────────────────────────────────── */
+
+/* Global defaults */
+* {
+    font: "JetBrainsMono Nerd Font 11";
+    blur: true;
+    padding: 10px;
+    background-color: transparent;
+    border-radius: 0px;
+}
+
+/* ── Window ──────────────────────────────── */
+window {
+    width: 750px;
+    height: 625px;
+    location: center;
+    blur: true;
+    border: 2px;
+    border-radius: 3px;
+    border-color: #6b6f75;              /* smoky steel */
+    background-color: transparent;
+    padding: 0px;
+    margin: 30px 50px;
+}
+
+/* ── Layout ──────────────────────────────── */
+mainbox {
+    orientation: horizontal;
+    children: [ "borderbox" ];
+    spacing: 0px;
+    padding: 0px;
+}
+
+borderbox {
+    orientation: horizontal;
+    children: [ "imagebox", "contentbox" ];
+    padding: 0px;
+    spacing: 0px;
+    border-radius: 3px;
+}
+
+contentbox {
+    orientation: vertical;
+    children: [ "entry", "listview" ];
+    spacing: 0px;
+    padding: 0px;
+    expand: true;
+}
+
+/* ── Imagebox ────────────────────────────── */
+imagebox {
+    background-image: url("~/.config/rofi/image.png");
+    background-repeat: false;
+    size: 300px 625px;
+}
+
+/* ── Elements ────────────────────────────── */
+element {
+    border-radius: 0px;
+}
+
+element-text, element-icon {
+    padding: 6px 8px;
+    spacing: 2px;
+    text-color: #cfd3d6;                /* soft smoke white */
+}
+
+element selected {
+    background-color: #2b2f33;          /* dark smoke highlight */
+    text-color: #e6e6e6;                /* bright fog text */
+    border-radius: 3px;
+}
+
+/* ── Input & Prompt ──────────────────────── */
+prompt {
+    enabled: false;
+    background-color: transparent;
+    text-color: #aab0b6;                /* muted gray */
+    padding: 5px 10px;
+}
+
+entry {
+    padding: 8px;
+    expand: false;
+    font: "JetBrainsMono Nerd Font 12";
+    text-color: #e0e0e0;                /* clean light smoke */
+    border-radius: 0px 3px 0px 0px;
+    background-color: #1f2327;          /* deep ash base */
+}
+
+/* ── Listview ────────────────────────────── */
+listview {
+    lines: 1;
+    background-color: rgba(25, 28, 31, 0.88); /* smoky glass */
+    border-radius: 0px 0px 3px 0px;
+    padding: 5px;
+}
