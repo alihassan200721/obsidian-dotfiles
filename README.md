@@ -201,8 +201,7 @@ cp -r .config/nvim ~/.config/
 
 ## 🤝 Related
 
-- [`alihassan200721/ashborn-nvim`](https://github.com/alihassan200721/ashborn-nvim) — Neovim config
-- [`alihassan200721/ashborn-fedora_hyprland`](https://github.com/alihassan200721/ashborn-fedora_hyprland) — main machine dotfiles
+- [`alihassan200721/ashborn-fedora_hyprland`](https://github.com/alihassan200721/ashborn-fedora_hyprland) — other hyprland setup
 
 ---
 
