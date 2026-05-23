@@ -148,7 +148,7 @@ Modular Lua config powered by `lazy.nvim` — lives in `.config/nvim/`.
 - `nvim-dap` + `nvim-dap-ui` (codelldb for C/C++, debugpy for Python)
 - `telescope.nvim`, `nvim-cmp`, `lualine.nvim`
 
-> Also maintained separately at [`alihassan200721/ashborn-nvim`](https://github.com/alihassan200721/ashborn-nvim)
+
 
 ---
 
