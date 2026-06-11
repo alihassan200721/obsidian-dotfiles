@@ -30,7 +30,7 @@ window#waybar {
   padding:       3px 10px;
 }
 
-/* ── All modules reset (no individual bg now) ─ */
+/* ── All modules reset ────────────────────────── */
 #workspaces,
 #clock,
 #bluetooth,
@@ -38,8 +38,12 @@ window#waybar {
 #network,
 #battery,
 #tray,
+#cpu,
+#memory,
+#temperature,
 #custom-power,
-#custom-brightness {
+#custom-brightness,
+#custom-music {
   background-color: transparent;
   border:           none;
   border-radius:    0;
@@ -52,26 +56,40 @@ window#waybar {
 /* ── Thin separators between modules ─────────── */
 #custom-power,
 #workspaces,
+#cpu,
+#memory,
 #pulseaudio {
-  border-right: 1px solid rgba(212, 163, 115, 0.12);
+  border-right:  1px solid rgba(212, 163, 115, 0.12);
+  padding-right: 12px;
+  margin-right:  2px;
+}
+
+#custom-music {
+  border-right:  1px solid rgba(212, 163, 115, 0.12);
+  padding-right: 12px;
+  margin-right:  2px;
+}
+
+#temperature {
+  border-right:  1px solid rgba(212, 163, 115, 0.12);
   padding-right: 12px;
   margin-right:  2px;
 }
 
 #bluetooth {
-  border-right: 1px solid rgba(212, 163, 115, 0.12);
+  border-right:  1px solid rgba(212, 163, 115, 0.12);
   padding-right: 12px;
   margin-right:  2px;
 }
 
 #custom-brightness {
-  border-right: 1px solid rgba(212, 163, 115, 0.12);
+  border-right:  1px solid rgba(212, 163, 115, 0.12);
   padding-right: 12px;
   margin-right:  2px;
 }
 
 #battery {
-  border-right: 1px solid rgba(212, 163, 115, 0.12);
+  border-right:  1px solid rgba(212, 163, 115, 0.12);
   padding-right: 12px;
   margin-right:  2px;
 }
@@ -82,6 +100,9 @@ window#waybar {
 #network:hover,
 #battery:hover,
 #clock:hover,
+#cpu:hover,
+#memory:hover,
+#temperature:hover,
 #custom-brightness:hover {
   color: #d4a373;
 }
@@ -132,6 +153,39 @@ window#waybar {
   font-weight: 600;
   font-size:   14px;
   padding:     4px 14px;
+}
+
+/* ── Music ────────────────────────────────────── */
+#custom-music {
+  color: #b9b9b9;
+}
+
+#custom-music:hover {
+  color: #d4a373;
+}
+
+/* ── CPU ──────────────────────────────────────── */
+#cpu.warning {
+  color: #c59a6a;
+}
+
+#cpu.critical {
+  color: #7a5cff;
+}
+
+/* ── Memory ───────────────────────────────────── */
+#memory {
+  color: #b9b9b9;
+}
+
+/* ── Temperature ──────────────────────────────── */
+#temperature {
+  color: #b9b9b9;
+}
+
+#temperature.critical {
+  color:     #7a5cff;
+  animation: blink 1.2s ease-in-out infinite;
 }
 
 /* ── Bluetooth ────────────────────────────────── */
