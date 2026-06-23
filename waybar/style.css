@@ -3,31 +3,31 @@
  * ================================================ */
 
 * {
-  font-family:   "JetBrains Mono", monospace;
-  font-size:     13px;
-  border:        none;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 13px;
+  border: none;
   border-radius: 0;
-  min-height:    0;
-  margin:        0;
-  padding:       0;
-  box-shadow:    none;
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+  box-shadow: none;
 }
 
 /* ── Bar (transparent, just a flex row) ──────── */
 window#waybar {
   background-color: transparent;
-  color:            #b9b9b9;
+  color: #b9b9b9;
 }
 
 /* ── The three floating pills ────────────────── */
 .modules-left,
 .modules-center,
 .modules-right {
-  background:    rgba(15, 15, 15, 0.82);
-  border:        1px solid rgba(212, 163, 115, 0.10);
+  background: rgba(15, 15, 15, 0.82);
+  border: 1px solid rgba(212, 163, 115, 0.1);
   border-radius: 14px;
-  margin:        0 4px;
-  padding:       3px 10px;
+  margin: 0 4px;
+  padding: 3px 10px;
 }
 
 /* ── All modules reset ────────────────────────── */
@@ -45,12 +45,12 @@ window#waybar {
 #custom-brightness,
 #custom-music {
   background-color: transparent;
-  border:           none;
-  border-radius:    0;
-  padding:          4px 10px;
-  margin:           0;
-  color:            #b9b9b9;
-  transition:       color 0.2s ease;
+  border: none;
+  border-radius: 0;
+  padding: 4px 10px;
+  margin: 0;
+  color: #b9b9b9;
+  transition: color 0.2s ease;
 }
 
 /* ── Thin separators between modules ─────────── */
@@ -59,39 +59,39 @@ window#waybar {
 #cpu,
 #memory,
 #pulseaudio {
-  border-right:  1px solid rgba(212, 163, 115, 0.12);
+  border-right: 1px solid rgba(212, 163, 115, 0.12);
   padding-right: 12px;
-  margin-right:  2px;
+  margin-right: 2px;
 }
 
 #custom-music {
-  border-right:  1px solid rgba(212, 163, 115, 0.12);
+  border-right: 1px solid rgba(212, 163, 115, 0.12);
   padding-right: 12px;
-  margin-right:  2px;
+  margin-right: 2px;
 }
 
 #temperature {
-  border-right:  1px solid rgba(212, 163, 115, 0.12);
+  border-right: 1px solid rgba(212, 163, 115, 0.12);
   padding-right: 12px;
-  margin-right:  2px;
+  margin-right: 2px;
 }
 
 #bluetooth {
-  border-right:  1px solid rgba(212, 163, 115, 0.12);
+  border-right: 1px solid rgba(212, 163, 115, 0.12);
   padding-right: 12px;
-  margin-right:  2px;
+  margin-right: 2px;
 }
 
 #custom-brightness {
-  border-right:  1px solid rgba(212, 163, 115, 0.12);
+  border-right: 1px solid rgba(212, 163, 115, 0.12);
   padding-right: 12px;
-  margin-right:  2px;
+  margin-right: 2px;
 }
 
 #battery {
-  border-right:  1px solid rgba(212, 163, 115, 0.12);
+  border-right: 1px solid rgba(212, 163, 115, 0.12);
   padding-right: 12px;
-  margin-right:  2px;
+  margin-right: 2px;
 }
 
 /* ── Hover: subtle amber highlight ───────────── */
@@ -114,27 +114,27 @@ window#waybar {
 
 #workspaces button {
   background-color: transparent;
-  color:            #5e5e5e;
-  border-radius:    7px;
-  padding:          2px 9px;
-  margin:           1px 2px;
-  font-size:        13px;
-  font-weight:      600;
-  border:           1px solid transparent;
-  transition:       all 0.2s ease;
+  color: #5e5e5e;
+  border-radius: 7px;
+  padding: 2px 9px;
+  margin: 1px 2px;
+  font-size: 13px;
+  font-weight: 600;
+  border: 1px solid transparent;
+  transition: all 0.2s ease;
 }
 
 #workspaces button:hover {
-  background-color: rgba(26, 26, 26, 0.70);
-  color:            #b9b9b9;
-  border-color:     rgba(212, 163, 115, 0.14);
+  background-color: rgba(26, 26, 26, 0.7);
+  color: #b9b9b9;
+  border-color: rgba(212, 163, 115, 0.14);
 }
 
 #workspaces button.active {
   background-color: rgba(26, 26, 26, 0.88);
-  color:            #d4a373;
-  border-color:     rgba(212, 163, 115, 0.35);
-  font-weight:      700;
+  color: #d4a373;
+  border-color: rgba(212, 163, 115, 0.35);
+  font-weight: 700;
 }
 
 #workspaces button.empty {
@@ -143,16 +143,16 @@ window#waybar {
 
 #workspaces button.urgent {
   background-color: rgba(122, 92, 255, 0.15);
-  color:            #7a5cff;
-  border-color:     rgba(122, 92, 255, 0.30);
+  color: #7a5cff;
+  border-color: rgba(122, 92, 255, 0.3);
 }
 
 /* ── Clock ───────────────────────────────────── */
 #clock {
-  color:       #e5e5e5;
+  color: #e5e5e5;
   font-weight: 600;
-  font-size:   14px;
-  padding:     4px 14px;
+  font-size: 14px;
+  padding: 4px 14px;
 }
 
 /* ── Music ────────────────────────────────────── */
@@ -184,7 +184,7 @@ window#waybar {
 }
 
 #temperature.critical {
-  color:     #7a5cff;
+  color: #7a5cff;
   animation: blink 1.2s ease-in-out infinite;
 }
 
@@ -228,12 +228,14 @@ window#waybar {
 }
 
 #battery.critical:not(.charging) {
-  color:     #7a5cff;
+  color: #7a5cff;
   animation: blink 1.2s ease-in-out infinite;
 }
 
 @keyframes blink {
-  50% { color: #9b84ff; }
+  50% {
+    color: #9b84ff;
+  }
 }
 
 /* ── Tray ─────────────────────────────────────── */
@@ -251,9 +253,9 @@ window#waybar {
 
 /* ── Power button ─────────────────────────────── */
 #custom-power {
-  color:        #7a5cff;
-  font-size:    16px;
-  padding:      4px 12px 4px 6px;
+  color: #7a5cff;
+  font-size: 16px;
+  padding: 4px 12px 4px 6px;
   margin-right: 2px;
   border-right: 1px solid rgba(212, 163, 115, 0.12);
 }
@@ -274,11 +276,11 @@ window#waybar {
 /* ── Tooltips ─────────────────────────────────── */
 tooltip {
   background-color: rgba(15, 15, 15, 0.96);
-  border:           1px solid rgba(212, 163, 115, 0.18);
-  border-radius:    10px;
-  color:            #a0a0a0;
-  font-size:        12px;
-  padding:          6px;
+  border: 1px solid rgba(212, 163, 115, 0.18);
+  border-radius: 10px;
+  color: #a0a0a0;
+  font-size: 12px;
+  padding: 6px;
 }
 
 tooltip label {

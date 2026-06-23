@@ -1,0 +1,36 @@
+#lock {
+  background-image: url("/usr/share/wlogout/icons/lock.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 64px 64px;
+}
+#suspend {
+  background-image: url("/usr/share/wlogout/icons/suspend.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 64px 64px;
+}
+#hibernate {
+  background-image: url("/usr/share/wlogout/icons/hibernate.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 64px 64px;
+}
+#logout {
+  background-image: url("/usr/share/wlogout/icons/logout.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 64px 64px;
+}
+#reboot {
+  background-image: url("/usr/share/wlogout/icons/reboot.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 64px 64px;
+}
+#shutdown {
+  background-image: url("/usr/share/wlogout/icons/shutdown.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 64px 64px;
+}

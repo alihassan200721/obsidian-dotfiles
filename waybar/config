@@ -1,12 +1,11 @@
 {
-    "layer": "top",
+    "layer": "overlay",
     "position": "top",
     "height": 42,
     "margin-top": 8,
     "margin-left": 12,
     "margin-right": 12,
     "spacing": 0,
-
     "modules-left": [
         "custom/power",
         "hyprland/workspaces",
@@ -14,21 +13,17 @@
         "memory",
         "pulseaudio"
     ],
-
     "modules-center": [
         "custom/music",
         "clock"
     ],
-
     "modules-right": [
-        "temperature",
         "custom/brightness",
         "battery",
         "bluetooth",
         "network",
         "tray"
     ],
-
     "hyprland/workspaces": {
         "disable-scroll": false,
         "all-outputs": true,
@@ -43,106 +38,121 @@
             "urgent": ""
         },
         "persistent-workspaces": {
-            "*": [ 1, 2, 3, 4, 5 ]
+            "*": [
+                1,
+                2,
+                3,
+                4,
+                5
+            ]
         },
         "on-scroll-up": "hyprctl dispatch workspace e+1",
         "on-scroll-down": "hyprctl dispatch workspace e-1"
     },
-
     "clock": {
         "format": "  {:%H:%M}",
         "format-alt": "  {:%A, %B %d %Y}",
         "tooltip-format": "<big>{:%B %Y}</big>\n<tt><small>{calendar}</small></tt>",
         "interval": 1
     },
-
     "cpu": {
         "interval": 3,
         "format": "  {usage}%",
         "tooltip-format": "CPU: {usage}%\nLoad: {load}",
         "states": {
-            "warning":  70,
+            "warning": 70,
             "critical": 90
         }
     },
-
     "memory": {
         "interval": 5,
         "format": "  {percentage}%",
         "tooltip-format": "{used:0.1f}G used / {total:0.1f}G total"
     },
-
     "temperature": {
         "critical-threshold": 80,
         "interval": 5,
         "format": "{icon}  {temperatureC}°C",
-        "format-icons": ["", "", ""],
+        "format-icons": [
+            "",
+            "",
+            ""
+        ],
         "tooltip": false
     },
-
     "bluetooth": {
-        "format":           "󰂯",
-        "format-on":        "󰂯",
-        "format-off":       "󰂲",
-        "format-disabled":  "󰂲",
+        "format": "󰂯",
+        "format-on": "󰂯",
+        "format-off": "󰂲",
+        "format-disabled": "󰂲",
         "format-connected": "󰂱  {device_alias}",
         "format-connected-battery": "󰂱  {device_alias} {device_battery_percentage}%",
-        "tooltip-format":           "{controller_alias}\t{controller_address}",
+        "tooltip-format": "{controller_alias}\t{controller_address}",
         "tooltip-format-connected": "{controller_alias}\n\n{num_connections} connected\n{device_enumerate}",
         "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
         "on-click": "blueman-manager"
     },
-
     "pulseaudio": {
-        "format":               "{icon}  {volume}%",
-        "format-muted":         "󰸈  Muted",
-        "format-bluetooth":     "󰂰  {volume}%",
+        "format": "{icon}  {volume}%",
+        "format-muted": "󰸈  Muted",
+        "format-bluetooth": "󰂰  {volume}%",
         "format-bluetooth-muted": "󰸈  Muted",
         "format-icons": {
-            "headphone":  "󰋋",
-            "headset":    "󰋎",
-            "phone":      "",
-            "default":    ["󰕿", "󰖀", "󰕾"]
+            "headphone": "󰋋",
+            "headset": "󰋎",
+            "phone": "",
+            "default": [
+                "󰕿",
+                "󰖀",
+                "󰕾"
+            ]
         },
         "scroll-step": 5,
-        "on-click":       "pavucontrol",
+        "on-click": "pavucontrol",
         "on-click-right": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
         "tooltip-format": "{desc} — {volume}%"
     },
-
     "network": {
-        "format-wifi":         "󰤨  {essid}",
-        "format-ethernet":     "󰈀  Wired",
+        "format-wifi": "󰤨  {essid}",
+        "format-ethernet": "󰈀  Wired",
         "format-disconnected": "󰤭  Off",
-        "format-linked":       "󰈀  {ifname}",
+        "format-linked": "󰈀  {ifname}",
         "tooltip-format-wifi": "󰤨  {essid}\nSignal: {signalStrength}%\nIP: {ipaddr}",
         "tooltip-format-ethernet": "󰈀  {ifname}\nIP: {ipaddr}",
         "tooltip-format-disconnected": "Disconnected",
         "on-click": "nm-connection-editor",
         "interval": 5
     },
-
     "battery": {
         "states": {
-            "full":     100,
-            "good":     80,
-            "warning":  30,
+            "full": 100,
+            "good": 80,
+            "warning": 30,
             "critical": 15
         },
-        "format":          "{icon}  {capacity}%",
+        "format": "{icon}  {capacity}%",
         "format-charging": "󰂄  {capacity}%",
-        "format-plugged":  "󰚥  {capacity}%",
-        "format-full":     "󰁹  Full",
-        "format-icons":    ["󰁺","󰁻","󰁼","󰁽","󰁾","󰁿","󰂀","󰂁","󰂂","󰁹"],
-        "tooltip-format":  "{timeTo}",
+        "format-plugged": "󰚥  {capacity}%",
+        "format-full": "󰁹  Full",
+        "format-icons": [
+            "󰁺",
+            "󰁻",
+            "󰁼",
+            "󰁽",
+            "󰁾",
+            "󰁿",
+            "󰂀",
+            "󰂁",
+            "󰂂",
+            "󰁹"
+        ],
+        "tooltip-format": "{timeTo}",
         "interval": 30
     },
-
     "tray": {
         "icon-size": 16,
         "spacing": 8
     },
-
     "custom/power": {
         "format": "⏻",
         "tooltip": true,
@@ -150,17 +160,15 @@
         "on-click": "bash -c 'case $(echo -e \"⏻  Shutdown\n  Restart\n  Suspend\n  Lock\" | rofi -dmenu -p \"Power\" -theme ~/.config/rofi/theme.rasi) in \"⏻  Shutdown\") systemctl poweroff ;; \"  Restart\") systemctl reboot ;; \"  Suspend\") systemctl suspend ;; \"  Lock\") swaylock ;; esac'",
         "on-click-right": "systemctl reboot"
     },
-
     "custom/brightness": {
         "exec": "~/.config/waybar/brightness.sh",
         "interval": 2,
         "format": "{}",
-        "on-scroll-up":   "brightnessctl set +5% && pkill -RTMIN+10 waybar",
+        "on-scroll-up": "brightnessctl set +5% && pkill -RTMIN+10 waybar",
         "on-scroll-down": "brightnessctl set 5%- && pkill -RTMIN+10 waybar",
         "signal": 10,
         "tooltip": false
     },
-
     "custom/music": {
         "exec": "~/.config/waybar/scripts/music.sh",
         "restart-interval": 5,
