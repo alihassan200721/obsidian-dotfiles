@@ -135,7 +135,7 @@ obsidian-dotfiles/
 | `SUPER + E` | Dolphin file manager |
 | `SUPER + F` | Fullscreen |
 | `SUPER + V` | Toggle floating |
-| `SUPER + B` | Firefox |
+| `SUPER + B` | brave-browser |
 | `SUPER + O` | OBS |
 | `SUPER + N` | Blender |
 | `SUPER + W` | Toggle Waybar |
