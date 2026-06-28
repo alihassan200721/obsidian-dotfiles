@@ -286,6 +286,17 @@ Modular Lua config under `lua/ali/` powered by `lazy.nvim`. Zero startup errors,
 | `<leader> + ws` | Save session for cwd |
 | `<leader> + wr` | Restore session for cwd |
 
+**Git (gitsigns)**
+
+| Keys | Action |
+|------|--------|
+| `]g` | Next git change |
+| `[g` | Previous git change |
+| `<leader> + gb` | Blame current line |
+| `<leader> + gp` | Preview git change (hunk) |
+| `<leader> + gs` | Stage hunk |
+| `<leader> + gu` | Undo stage hunk |
+
 ---
 
 ## 📦 Dependencies
