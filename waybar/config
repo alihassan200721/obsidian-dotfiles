@@ -27,7 +27,7 @@
     "hyprland/workspaces": {
         "disable-scroll": false,
         "all-outputs": true,
-        "format": "{icon}",
+        "format": "{id}",
         "format-icons": {
             "1": "1",
             "2": "2",
@@ -50,14 +50,14 @@
         "on-scroll-down": "hyprctl dispatch workspace e-1"
     },
     "clock": {
-        "format": "  {:%H:%M}",
-        "format-alt": "  {:%A, %B %d %Y}",
+        "format": "󰥔  {:%H:%M}",
+        "format-alt": "󰃭  {:%A, %B %d %Y}",
         "tooltip-format": "<big>{:%B %Y}</big>\n<tt><small>{calendar}</small></tt>",
         "interval": 1
     },
     "cpu": {
         "interval": 3,
-        "format": "  {usage}%",
+        "format": "󰍛  {usage}%",
         "tooltip-format": "CPU: {usage}%\nLoad: {load}",
         "states": {
             "warning": 70,
@@ -66,7 +66,7 @@
     },
     "memory": {
         "interval": 5,
-        "format": "  {percentage}%",
+        "format": "󰘚  {percentage}%",
         "tooltip-format": "{used:0.1f}G used / {total:0.1f}G total"
     },
     "temperature": {
@@ -74,9 +74,9 @@
         "interval": 5,
         "format": "{icon}  {temperatureC}°C",
         "format-icons": [
-            "",
-            "",
-            ""
+            "󰔏",
+            "󰔐",
+            "󰔒"
         ],
         "tooltip": false
     },
@@ -100,7 +100,7 @@
         "format-icons": {
             "headphone": "󰋋",
             "headset": "󰋎",
-            "phone": "",
+            "phone": "󰄜",
             "default": [
                 "󰕿",
                 "󰖀",
